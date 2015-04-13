@@ -1,23 +1,54 @@
 <html>
-  <head>
-
-    <script src="build/main.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-
-  </head>
+    <head>
+        <script src="build/javascripts/main.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="build/stylesheets/main.css" />
+    </head>
 
 
-  <body>
-    <div id="main-wrapper">
-      <textarea name="manuscript" tabindex="0" placeholder="start typing" class="manuscript" rows="40" cols="80">
-      </textarea>
-      <aside class="legend">
-        Word count:
-        <span id="wordcount"></span>
-      </aside>
-    </div>
+    <body> 
+        <div id="main-wrapper">
+            <textarea name="manuscript" tabindex="0" placeholder="Hi there! First, set your word goal in the grey box. You'll get a colorful surprise when you achieve it. Writer will remember your manuscript even when you close your browser, but you should probably save it if you're proud of it. Now write something amazing...." class="manuscript flex-item" rows="40" cols="80">
+            </textarea>
 
+            <aside class="legend-wrapper flex-item">
+                <div class="legend">
+                    Word count:
+                    <span id="wordcount"></span>
+                    <div class="goal">
+                        Goal (optional): 
+                        <input id="goal-field" type="text"></input>
+                    </div>
+                    <div id="goal-countdown">
+                        Words to goal:
+                        <span class="target"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div id="footer">
+            <div id="copyright">
+                &copy; 2015 Peter Kong 
+            </div>
+            <div class="byline"> 
+                Feedback and feature suggestions are welcome: 
+                <a href="https://twitter.com/happythenewsad">
+                    twitter 
+                </a> &nbsp; 
+                <a href="https://github.com/happythenewsad"> 
+                    github 
+                </a>
+            </div>
+        </div>
 
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  </body>
+          ga('create', 'UA-25801692-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
 </html>

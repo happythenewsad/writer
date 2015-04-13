@@ -1,0 +1,103 @@
+$background-grey: rgb(240, 240, 240);
+$accomplish-green: rgb(5, 250, 40);
+$tablet-breakpoint: 1000px;
+
+body {
+    margin: 0;
+}
+#header {
+  background-color: $background-grey;
+  padding: 20px;
+  width: 100%;
+}
+
+.flex-item {
+    //border-style: solid;
+}
+
+#main-wrapper {
+    /* setting height here breaks responsiveness */
+    display: flex;
+    margin-top: 50px;
+    font-size: 20;
+    flex-direction: row;
+
+    @media screen and (max-width: $tablet-breakpoint) {
+        flex-direction: column;
+    }
+
+    .manuscript {
+
+        border: none;
+        outline: none;
+        resize: none;
+        padding-left: 250px;
+        font-size: 25;
+        order: 1;
+
+        max-width: 1100px;
+        min-width: 600px;
+
+        &.goal-accomplished {
+            color: $accomplish-green;
+        }
+    }
+
+    .legend-wrapper {
+        @media screen and (min-width: $tablet-breakpoint) {
+            min-height: 300px;
+        }
+        
+        padding: 40px;
+        flex: 1 auto;
+        order: 2;
+        font-size: 30;
+        min-width: 400px;
+        flex-grow: 0;
+
+        .legend {
+            background-color: rgb(240, 240, 240);
+            padding: 30px;
+            #goal-field {
+                width: 100px;
+                font-size: 25;
+            }
+
+            #goal-countdown {
+                .target {
+
+                    &.first-quintile {
+                        color: rgb(255, 0, 40);
+                    }
+
+                    &.second-quintile {
+                        color: rgb(205, 50, 40);
+                    }
+
+                    &.third-quintile {
+                        color: rgb(155, 100, 40);
+                    }
+
+                    &.fourth-quintile {
+                        color: rgb(105, 150, 40);
+                    }
+
+                    &.fifth-quintile {
+                        color: rgb(55, 200, 40);
+                    }
+
+                    &.accomplished {
+                        color: $accomplish-green;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#footer {
+    background-color: $background-grey;
+    padding: 20px;
+    width: 100%;
+}
